@@ -13,7 +13,6 @@ export default class DistrictRepository {
       }
       newObj[upperCaseLocation].stats = {...newObj[upperCaseLocation].stats, [currentElement.TimeFrame]: percentage};
       newObj[upperCaseLocation].location = upperCaseLocation;
-      newObj[upperCaseLocation].selected = false;
     return newObj;
    },  {})
   }

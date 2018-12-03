@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card.js';
 import ComparedCard from './ComparedCard.js';
+import PropTypes from 'prop-types';
 
 const CompareCardContainer = ({compareCard1, compareCard2, compareCards}) => {
     let card1;
@@ -34,6 +35,12 @@ const CompareCardContainer = ({compareCard1, compareCard2, compareCards}) => {
             {card2}
         </div>
     )
+}
+
+CompareCardContainer.propTypes = {
+    compareCard1: PropTypes.object,
+    compareCard2: PropTypes.object,
+    compareCards: PropTypes.func
 }
 
 export default CompareCardContainer;

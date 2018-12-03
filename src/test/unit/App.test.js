@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from '../../App';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
@@ -18,7 +18,6 @@ describe('App', () => {
     const initialState = {data: {
       'ACADEMY 20': {
       location: "ACADEMY 20",
-      // selected: "",
       stats:
       {2012: 0.479,
       2013: 0.488,
@@ -27,7 +26,6 @@ describe('App', () => {
     }, 
       'ADAMS COUNTY 14': {
       location: "ADAMS COUNTY 14",
-      // selected: "",
       stats:
       {2012: 0.479,
       2013: 0.488,
@@ -35,7 +33,6 @@ describe('App', () => {
       }, 
       'COLORADO': {
         location: "COLORADO",
-        // selected: "",
         stats:
         {2012: 0.479,
         2013: 0.488,
@@ -46,7 +43,6 @@ describe('App', () => {
       
     const expected = {'ADAMS COUNTY 14': {
       location: "ADAMS COUNTY 14",
-      // selected: "",
       stats:
       {2004: 0.228,
       2005: 0.3,
@@ -92,5 +88,8 @@ describe('DisplaySelected', () => {
     wrapper.instance().displaySelected(expected);
     expect(wrapper.state('compareCard1')).toEqual(expected);
     })
+  })
+  describe('display search function', () => {
+    it('')
   })
 })

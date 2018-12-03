@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const ComparedCard = (props) => {
     let keys = Object.keys(props.cardInfo);
@@ -13,6 +13,12 @@ const ComparedCard = (props) => {
             <div> {keys[1]} : {values[2]}</div>
         </div>
     )
+}
+
+ComparedCard.propTypes = {
+    cardInfo: PropTypes.object,
+    className: PropTypes.string,
+    compareCard1: PropTypes.string
 }
 
 export default ComparedCard;

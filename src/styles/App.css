@@ -3,13 +3,13 @@
 
 * {
     font-family: 'Raleway', sans-serif;
-    /* background-color: #DDDBCB; */
     margin-top: 0;
 }
 
 .App {
     background-color: #C9C5BA;
-    /* background-color: #EBBAB9; */
+    height: 100vh;
+    overflow: scroll;
 }
 
 h1 {

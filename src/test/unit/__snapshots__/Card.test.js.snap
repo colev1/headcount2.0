@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     cardInfo={
         Object {
-            "location": "Colorado",
+            "location": "COLORADO",
             "stats": Object {
               "2004": 0.24,
               "2005": 0.278,
@@ -39,7 +39,7 @@ ShallowWrapper {
       "children": Array [
         <h1>
            
-          Colorado
+          COLORADO
            
 </h1>,
         <article>
@@ -225,14 +225,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             " ",
-            "Colorado",
+            "COLORADO",
             " ",
           ],
         },
         "ref": null,
         "rendered": Array [
           " ",
-          "Colorado",
+          "COLORADO",
           " ",
         ],
         "type": "h1",
@@ -997,7 +997,7 @@ ShallowWrapper {
         "children": Array [
           <h1>
              
-            Colorado
+            COLORADO
              
 </h1>,
           <article>
@@ -1183,14 +1183,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               " ",
-              "Colorado",
+              "COLORADO",
               " ",
             ],
           },
           "ref": null,
           "rendered": Array [
             " ",
-            "Colorado",
+            "COLORADO",
             " ",
           ],
           "type": "h1",

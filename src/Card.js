@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/Card.css';
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
     const stats = Object.keys(props.cardInfo.stats).map(currStat => {
@@ -8,7 +9,7 @@ const Card = (props) => {
             classString = 'high'; 
         }
         return (<li 
-        className={classString}
+        className={classString} key={currStat}
         >
             <span className='year'>
             {currStat}
@@ -18,18 +19,27 @@ const Card = (props) => {
             </span>
         </li> )
     });
+
     return (
         <div className={props.selected || 'card selected'} key={props.cardInfo.id} 
         onClick={() => props.displaySelected(props.cardInfo)}
         > 
             <h1> {props.cardInfo.location} </h1>
-                <p> 
-                    <h3> year </h3>
-                    <h3> % enrollment </h3>
-                </p>
+                <article> 
+                    <h3 className="info"> year </h3>
+                    <h3 className="info"> % enrollment </h3>
+                </article>
             <ul> {stats} </ul>
         </div>
     );
+}
+
+Card.propTypes = {
+    compareCard1: PropTypes.object,
+    compareCard2: PropTypes.object,
+    cardInfo: PropTypes.object,
+    displaySelected: PropTypes.func,
+    selected: PropTypes.string
 }
 
 export default Card;

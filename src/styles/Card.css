@@ -10,8 +10,6 @@
     max-width: 400px;
 }
 
-
-
 .compared-card {
     justify-content: space-between;
     align-items: center;
@@ -23,7 +21,6 @@ ul {
     color: #EBBAB9;
     font-size: 20px;
     list-style: none;
-    /* line-height: 20px; */
     margin-top: 0;
 }
 
@@ -48,7 +45,7 @@ li.low {
     font-style: bold;
 }
 
-p {
+article {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

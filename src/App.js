@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       data: {},
       compareCard1: null,
-      compareCard2: null
+      compareCard2: null,
+      changedCard: 'compareCard1'
     }
   }
 
@@ -38,21 +39,22 @@ class App extends Component {
   displaySelected = (card) => {
     const district = new DistrictRepository(data);
     const comparedCard = district.findByName(card.location);
-    comparedCard.selected = !comparedCard.selected;
-    card.selected = !card.selected;
-    // console.log(card);
     if (!this.state.compareCard1) {
       this.setState({compareCard1: comparedCard});
-    } else {
+    } else if (!this.state.compareCard2) {
       this.setState({compareCard2: comparedCard});
-    }
+    } 
+      if (this.state.changedCard === 'compareCard1') {
+        this.setState({changedCard: 'compareCard2'})
+      } else {
+        this.setState({changedCard: 'compareCard1'})
+      }
+      this.setState({[this.state.changedCard]: comparedCard});
   }
 
   compareCards = (card1, card2) => {
     const district = new DistrictRepository(data);
     const comparedAvg = district.compareDistrictAverages(card1, card2);
-    console.log(comparedAvg);
-    // this.setState({middleCard: comparedAvg});
     return comparedAvg;
 }
 
@@ -68,12 +70,11 @@ class App extends Component {
           <CompareCardContainer 
           compareCard1 = {this.state.compareCard1}
           compareCard2 = {this.state.compareCard2}
-          // middleCard= {this.state.middleCard}
           compareCards = {this.compareCards}
           />
           <CardContainer 
           data={this.state.data} 
-          displaySelected={this.displaySelected} 
+          displaySelected={this.displaySelected}
           compareCard1 = {this.state.compareCard1}
           compareCard2 = {this.state.compareCard2}
           />
